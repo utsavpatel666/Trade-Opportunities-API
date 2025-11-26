@@ -17,13 +17,10 @@ async def analyze_sector(
 ):
     validate_sector_name(sector)
 
-    # Step 1: Collect data
     news = get_sector_news(sector)
 
-    # Step 2: AI Analysis
     ai_analysis = analyze_data(sector, news)
 
-    # Step 3: Markdown Report
     report = generate_report(sector, news, ai_analysis)
 
     return {"sector": sector, "report": report}

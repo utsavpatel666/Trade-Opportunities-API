@@ -10,7 +10,7 @@ limiter = Limiter(key_func=get_remote_address)
 
 app = FastAPI()
 
-# Attach limiter to the app state  ✅ IMPORTANT
+
 app.state.limiter = limiter
 
 # Add middleware for rate limiting
